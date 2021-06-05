@@ -95,7 +95,8 @@ public class Selenium {
     public static void main(String [] args) { //args gauti vartotojo parametrus
         System.out.println("testavimas");
         setup();
-       // getResults();
+        getResults1();
+        getResults2();
         addItem("penktadienis", "penktadienis", "penktadienis","penktadienis", 123);
         badItem("+@@","@</a>@","/@", "@@@@@", 3333333);
         deleteItem("13");
@@ -104,15 +105,21 @@ public class Selenium {
 
         browser.close();
     }
-//
-//    public static String getResults(){
-//
-//        WebElement result2 = browser.findElement(By.className("msg-good"));
-//        String resultStr = result2.getText();
-//
-//        System.out.println(result2);
-//        return resultStr;
-//    }
+    public static String getResults1(){
+        WebElement result1 = browser.findElement(By.className("msg-good"));
+        String resultStr = result1.getText();
+
+        System.out.println(result1);
+        return resultStr;
+    }
+    public static String getResults2(){
+
+        WebElement result2 = browser.findElement(By.className("msg-bad"));
+        String resultStr = result2.getText();
+
+        System.out.println(result2);
+        return resultStr;
+    }
 
 
     public static void close(){
